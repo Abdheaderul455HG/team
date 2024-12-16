@@ -1,0 +1,96 @@
+        *{
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth; 
+          }
+        
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1A2238;
+            color: #FFF;
+            text-align: center;
+            direction: rtl;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        
+        p {
+            font-size: 1.2em;
+            margin: 10px 20px;
+            line-height: 1.6;
+        }
+        
+        /* تصميم قسم البطاقات */
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin: 100px;
+            flex-wrap: wrap;
+        }
+        
+.card {
+    background-color: #fff;
+    padding-bottom: 20px;
+    width: auto;
+    height: auto; /* يجعل الصندوق يتكيف مع النص */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000; /* لون النص داخل الصندوق */
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* الظلال */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin: 20px auto; /* إضافة مسافة بين الصناديق */
+}
+
+.card-title {
+    font-size: 18px;
+    color: #000;
+    margin-top: 10px;
+    text-align: center;
+}
+        
+        .cards iframe {
+            width:315 px;
+            border-radius: 15px 0px 0px 0px ;
+            /* margin:5vh 5vh; */
+            justify-content: center;
+            flex-direction: column;
+        
+        }
+        
+        .card h3 {
+            margin: 0;
+            font-size: 1.1em;
+            text-align: center;
+        }
+        
+        .card:hover {
+            background-color: #FFD700; /* لون جديد عند المرور */
+            color: #000;
+            transform: translateY(-10px); /* تأثير الحركة */
+        }
+        
+
+
+/*         
+        @media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+} */
+
+     

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sign in.css">
+    <title>sign in</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to in Academy</h1>
+    </header>
+
+    <div class="hero-image"></div>
+
+    <div class="container">
+        <h2>sige in</h2>
+        <form id="registrationForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="password" required>
+            <select id="language" required>
+                <option value="">Choose programming language</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>
+                <option value="C#">C#</option>
+                <option value="C">C</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="PHP">PHP</option>
+                <option value="SQL">SQL</option>
+                <option value="MYSQL">MYSQL</option>
+                <option value="REACT">REACT</option>
+            </select>
+            <button type="submit">sign in</button>
+        </form>
+        <p id="message" class="success-message" style="display: none;">success</p>
+    </div>
+
+    <div class="footer">
+        <img src="../img/download.jpeg" alt="Icon 1">
+    
+    </div>
+
+    <script>
+        const form = document.getElementById("registrationForm");
+        const message = document.getElementById("message");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const language = document.getElementById("language").value;
+
+            if (name && email && password && language) {
+
+                message.textContent = "success";
+                message.style.display = "block";
+                message.style.color = "green";
+
+                form.reset();
+            } else {
+                message.textContent = "please fill in all fields";
+                message.style.display = "block";
+                message.style.color = "red";
+            }
+        });
+    </script>
+</body>
+
+</html>
